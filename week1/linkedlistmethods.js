@@ -59,9 +59,10 @@ class LinkedList {
             return 0;
         } else {
             var runner = this.head;
-            count = 0;
+            var count = 0;
             while (runner !== null) {
                 count += 1;
+                runner = runner.next;
             }
         }
         return count;
