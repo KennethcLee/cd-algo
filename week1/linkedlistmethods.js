@@ -44,13 +44,26 @@ class LinkedList {
         if (this.head == null) {
             return false;
         } else {
-            var nextNode = this.head;
-            while (nextNode !== null) {
-                if (nextNode.data == value) {
+            var runner = this.head;
+            while (runner) {
+                if (runner.data == value) {
                     return true;
                 }
-                nextNode = nextNode.next;
+                runner = runner.next;
+            }
         }
     }
 
+    length() {
+        if (this.head == null) {
+            return 0;
+        } else {
+            var runner = this.head;
+            count = 0;
+            while (runner !== null) {
+                count += 1;
+            }
+        }
+        return count;
+    }
 }
