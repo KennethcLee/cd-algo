@@ -40,4 +40,17 @@ class LinkedList {
         }
     }
 
+    contains(value) {
+        if (this.head == null) {
+            return false;
+        } else {
+            var nextNode = this.head;
+            while (nextNode !== null) {
+                if (nextNode.data == value) {
+                    return true;
+                }
+                nextNode = nextNode.next;
+        }
+    }
+
 }
