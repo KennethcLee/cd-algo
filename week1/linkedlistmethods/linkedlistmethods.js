@@ -15,20 +15,29 @@ class LinkedList {
             self.head = newNode();
             return self;
         }
-        this.head=newNode;
-        newNode.next= new Node(val);
-        return self;
+        var newNode = new Node(val);
+        newNode.next = this.head;
+        this.head = newNode;
+        return this.head;
     }
 
     removeFront() {
         if(self.head) {
-            self.head=self.next;
+            var removedNode=this.head;
+            this.head = removedNode.next
+            removedNode.next = null;
+            return this.head;
+
         }
         return self;
     }
 
     front() {
-        console.log(self.head);
+        if (this.head == null) {
+            return null;
+        } else {
+            return this.head.data;
+        }
     }
 
 }
