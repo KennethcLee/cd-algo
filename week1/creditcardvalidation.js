@@ -39,7 +39,7 @@ console.log(isCreditCardValid([5,2,2,2,1]));
 //     sum += lastValue;
 //     if (sum % 10 == 0) {
 //         result = true;
-//     } 
+//     }
 
 //     return result;
 // }
