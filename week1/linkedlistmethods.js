@@ -132,23 +132,67 @@ class LinkedList {
         return newList.sum()/newList.length();
     }
 
+    last() {
+        if (this.head == null) {
+            return null;
+        } else {
+            var runner = this.head;
+            var result = 0;
+            if (runner) {
+                result = runner.data;
+            }
+        }
+        return result;
+    }
+
+    removeBack() {
+        if (this.head == null) {
+            return null;
+        } else {
+            var runner = this.head;
+            while (runner.next.next) {
+                    runner = runner.next
+            }
+        runner.next = runner.next.next;
+        }
+        return this.head;
+    }
+
+    addBack(val) {
+        var newNode = new Node(val);
+        if (this.head == null) {
+            return null;
+        } else {
+            var runner = this.head;
+            while (runner.next) {
+                    runner = runner.next
+        }
+        runner.next = newNode;
+        }
+        return this.head;
+    }
+
 }
 
 newList= new LinkedList();
-newList.addFront(100);
-newList.addFront(200);
-console.log(newList.contains(200));
-console.log(newList.front());
-console.log(newList.length());
-newList.removeFront(200);
-console.log(newList.contains(200));
-console.log(newList.front());
-newList.addFront(300);
-newList.addFront(400);
 newList.addFront(500);
+newList.addFront(400);
+// console.log(newList.contains(200));
+// console.log(newList.front());
+// console.log(newList.length());
+newList.removeFront(200);
+// console.log(newList.contains(200));
+// console.log(newList.front());
+newList.addFront(300);
+newList.addFront(200);
+newList.addFront(100);
 console.log(newList.display());
-console.log(newList.length());
-console.log(newList.max());
-console.log(newList.min());
-console.log(newList.sum());
-console.log(newList.average());
+// console.log(newList.length());
+// console.log(newList.max());
+// console.log(newList.min());
+// console.log(newList.sum());
+// console.log(newList.average());
+
+newList.removeBack();
+newList.addBack(600);
+console.log(newList.display());
