@@ -172,6 +172,22 @@ class LinkedList {
         return this.head;
     }
 
+    minToFront() {
+        if (this.head == null) {
+            return null;
+        } else {
+            var runner = this.head;
+            var minpointer = this.head;
+            while (runner) {
+                if (minpointer.next.data < runner.next.data) {
+                    
+                }
+        }
+        runner.next = newNode;
+        }
+        return this.head;
+    }
+
 }
 
 newList= new LinkedList();
